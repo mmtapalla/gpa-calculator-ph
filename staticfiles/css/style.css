@@ -71,11 +71,6 @@ footer {
     align-items: center;
 }
 
-.github-logo {
-    height: 24px;
-    width: 24px;
-}
-
 @media (max-width: 767.98px) {
     .input-group {
         justify-content: center;
