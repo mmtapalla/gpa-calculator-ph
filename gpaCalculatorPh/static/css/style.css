@@ -72,8 +72,8 @@ footer {
 }
 
 .github-logo {
-    height: 24px; /* Adjusted size */
-    width: auto;
+    height: 24px;
+    width: 24px;
 }
 
 @media (max-width: 767.98px) {
