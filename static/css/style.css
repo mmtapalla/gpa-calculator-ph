@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #ffe000;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #800000;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b80303;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header {
+    font-family: "Cinzel", serif;
+    color: #800000;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.table-responsive {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+table thead th {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to bottom, white, transparent);
+    z-index: 1;
+}
