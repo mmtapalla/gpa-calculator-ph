@@ -2,13 +2,10 @@
     "builds": [
         {
             "src": "gpaCalculatorPh/wsgi.py",
-            "use": "@vercel/python"
-        },
-        {
-            "src": "build_files.sh",
-            "use": "@vercel/static-build",
+            "use": "@vercel/python",
             "config": {
-                "distDir": "staticfiles_build"
+                "maxLambdaSize": "15mb",
+                "runtime": "python3.11.2"
             }
         }
     ],
