@@ -2,18 +2,19 @@
     "version": 2,
     "builds": [
         {
-            "src": "gpaCalculatorPh/manage.py",
-            "use": "@vercel/python"
+            "src": "gpaCalculatorPh/wsgi.py",
+            "use": "@vercel/python",
+            "config": { "maxLambdaSize": "15mb" }
         }
     ],
     "routes": [
         {
             "src": "/static/(.*)",
-            "dest": "/staticfiles/$1"
+            "dest": "/static/$1"
         },
         {
             "src": "/(.*)",
-            "dest": "gpaCalculatorPh/manage.py"
+            "dest": "gpaCalculatorPh/wsgi.py"
         }
     ]
 }
