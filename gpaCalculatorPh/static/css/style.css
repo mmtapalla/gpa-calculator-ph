@@ -1,52 +1,83 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+:root {
+    /* PUP Logo palette */
+    --maroon: #800000;
+    --gold-dark: #daa520;
+    --gold-light: #ffdf00;
+    --white: #daa520;
+    --black: #333;
+}
+
+::selection {
+    background: var(--gold-light);
+    color: var(--maroon);
+}
 
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
 
-::-webkit-scrollbar-track:hover {
-    background: #ffe000;
+::-webkit-scrollbar-thumb {
+    background: var(--maroon);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #800000;
-    border-radius: 10px;
+    background: #b80303;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #b80303;
+::-webkit-scrollbar-track {
+    background: var(--gold-light);
+    border-radius: 10px;
 }
 
 body,
 html {
     height: 100%;
-    margin: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-header .header {
+.header {
     font-family: "Cinzel", serif;
-    color: #800000;
+    color: var(--maroon);
 }
 
-main {
+.main {
     width: 100%;
     max-width: 800px;
     padding: 20px;
 }
 
 .table-responsive {
-    max-height: 70vh;
+    max-height: 50vh;
     overflow-y: auto;
 }
 
-table thead th {
+.table-head-item {
+    font-family: "Poppins", sans-serif;
     position: sticky;
     top: 0;
-    background: linear-gradient(to bottom, white, transparent);
     z-index: 1;
+    backdrop-filter: blur(5px);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github-logo {
+    height: 24px; /* Adjusted size */
+    width: auto;
+}
+
+@media (max-width: 767.98px) {
+    .input-group {
+        justify-content: center;
+    }
 }

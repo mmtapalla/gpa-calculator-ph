@@ -33,7 +33,12 @@ function addRows() {
 }
 
 function deleteRow(button) {
-    button.closest("tr").remove();
+    const tableBody = document.getElementById("gpaTableBody");
+    if (tableBody.rows.length > 1) {
+        button.closest("tr").remove();
+    } else {
+        alert("At least one row must remain.");
+    }
 }
 
 function calculateGPA() {
@@ -96,6 +101,12 @@ function convertToPoints(usGrade) {
         F: 0.0,
     };
     return gradePointsMap[usGrade] || 0.0;
+}
+
+function confirmClearAll() {
+    if (confirm("Are you sure you want to clear all?")) {
+        clearAll();
+    }
 }
 
 function clearAll() {

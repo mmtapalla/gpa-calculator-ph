@@ -25,29 +25,41 @@
         ></script>
     </head>
     <body>
-        <main class="container">
+        <main class="main container">
             <header class="mb-4">
                 <h1 class="header text-center">⭐ GPA Calculator ⭐</h1>
             </header>
 
             <form id="gpaForm">
-                <div class="table-responsive mb-4">
+                <div class="table-responsive mb-4" style="height: 50vh">
                     <table
                         id="gpaTable"
                         class="table table-hover table-striped"
                     >
-                        <thead>
-                            <tr class="row-cols-2">
-                                <th scope="col" class="col-2">Course</th>
-                                <th scope="col" class="col-2">Units</th>
-                                <th scope="col" class="col-2">Grade</th>
-                                <th scope="col" class="col-2 text-center">
+                        <thead class="bg-light">
+                            <tr>
+                                <th scope="col" class="table-head-item">
+                                    Course
+                                </th>
+                                <th scope="col" class="table-head-item">
+                                    Units
+                                </th>
+                                <th scope="col" class="table-head-item">
+                                    Grade
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="table-head-item text-center"
+                                >
                                     US Grade
                                 </th>
-                                <th scope="col" class="col-2 text-center">
+                                <th
+                                    scope="col"
+                                    class="table-head-item text-center"
+                                >
                                     Grade Points
                                 </th>
-                                <th scope="col" class="col-1"></th>
+                                <th scope="col" class="table-head-item"></th>
                             </tr>
                         </thead>
                         <tbody id="gpaTableBody">
@@ -96,7 +108,7 @@
                         <button
                             type="button"
                             class="btn btn-danger"
-                            onclick="clearAll()"
+                            onclick="confirmClearAll()"
                         >
                             Clear All
                         </button>
@@ -104,7 +116,19 @@
                 </div>
             </form>
             <hr />
-            <p class="text-center">Coded by <strong>Miguel Tapalla.</strong></p>
+            <footer class="d-flex justify-content-between align-items-center">
+                <div>
+                    <a href="https://github.com/mmtapalla"
+                        ><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                            alt="GitHub Logo"
+                            class="github-logo"
+                    /></a>
+                </div>
+                <div class="text-center">
+                    Coded by <strong>Miguel Tapalla.</strong>
+                </div>
+            </footer>
         </main>
     </body>
 </html>
